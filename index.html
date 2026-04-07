@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escola de Cultura Indígena | [Nome da Tribo]</title>
+    <title>Anamã Nhandecy Gaya | Cultura Guarani Mbya</title>
     <style>
         * {
             margin: 0;
@@ -63,7 +63,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Grid de Atividades */
+        /* Atividades */
         .atividades {
             margin: 2rem 0;
         }
@@ -126,6 +126,7 @@
             object-fit: cover;
             border-radius: 15px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background-color: #ddd;
         }
 
         /* Contato */
@@ -140,6 +141,10 @@
         .contato h2 {
             color: var(--terra);
             margin-bottom: 1rem;
+        }
+
+        .contato p {
+            margin-bottom: 0.5rem;
         }
 
         .btn-whatsapp {
@@ -164,12 +169,24 @@
             margin: 0.5rem;
         }
 
+        .endereco {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ccc;
+        }
+
         footer {
             background-color: var(--terra);
             color: white;
             text-align: center;
             padding: 2rem;
             margin-top: 2rem;
+        }
+
+        footer .cnpj {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            opacity: 0.8;
         }
 
         @media (max-width: 768px) {
@@ -185,77 +202,86 @@
 <body>
 
 <header>
-    <!-- ALTERAR AQUI: Nome da escola e tribo -->
-    <h1>🏹 Escola de Cultura Indígena</h1>
-    <p>Preservando as tradições do povo [Nome da Tribo]</p>
+    <h1>🏹 Anamã Nhandecy Gaya</h1>
+    <p>Casa de cura, rezos e fortalecimento espiritual | Etnia Guarani Mbya</p>
 </header>
 
 <div class="container">
 
     <!-- SEÇÃO SOBRE -->
     <section class="sobre">
-        <!-- ALTERAR AQUI: Texto de apresentação -->
-        <h2>📖 Quem Somos</h2>
-        <p>Somos uma escola sem fins lucrativos dedicada ao ensino e preservação da cultura indígena. Nossa missão é compartilhar os conhecimentos tradicionais da nossa tribo, incluindo a língua, música, costumes, artesanato e modos de vida. Acreditamos que a educação cultural fortalece a identidade e promove o respeito entre os povos.</p>
-        <p style="margin-top: 1rem;">📍 Baseados em [cidade/região], atendemos crianças, jovens e adultos interessados em aprender e valorizar a cultura indígena.</p>
+        <h2>📖 Nossa História</h2>
+        <p>Anamã Nhandecy Gaya é uma casa xamânica fundada por Victor Hugo Vincenzi, da etnia Guarani Mbya. A história desta casa teve início em uma consagração na Argentina, junto ao povo Guarani, onde foi revelada a jornada de ensino e aprendizado.</p>
+        <p style="margin-top: 1rem;">Após uma breve jornada na Amazônia, Victor consagrou-se Pajé (Xamã), compreendendo a essência da pajelança ancestral. A casa foi fundada como um espaço de cura, rezos e fortalecimento espiritual, com o propósito de levar luz e despertar consciências.</p>
+        <p style="margin-top: 1rem;">Mais do que um encontro, esta prática traz o conhecimento do cosmos e a conexão com a ancestralidade. É o reencontro com o que nossos ancestrais muitas vezes não puderam ser. Anamã Nhandecy Gaya é um tributo a todos que buscam sua originalidade e profundeza, e também uma homenagem à memória de Ororo, fiel companheiro cuja essência permanece viva.</p>
+        <p style="margin-top: 1rem;">Esta casa não ensina apenas cultura; ensina o encontro, a conexão e o respeito aos limites da natureza. É a resistência de quem saiu da Reserva Guarani, onde viveu por 13 anos, e carrega a força do povo Guarani Mbya, que historicamente mantém uma espiritualidade viva baseada na busca pela 'Terra sem Males' (Yvy Mara Ey).</p>
+        <p style="margin-top: 1rem;">O projeto representa a continuidade do saber ancestral em espaços contemporâneos, garantindo que o <strong>Teko Porã</strong> (o bem viver) seja preservado e compartilhado como uma ferramenta de cura e identidade histórica.</p>
     </section>
 
-    <!-- ATIVIDADES ENSINADAS -->
+    <!-- ATIVIDADES OFERECIDAS -->
     <section class="atividades">
-        <h2>🌿 O que Ensinamos</h2>
+        <h2>🌿 O que oferecemos</h2>
         <div class="grid-atividades">
-            <!-- ALTERAR AQUI: Atividades (mantenha a estrutura) -->
-            <div class="card-atividade">
-                <div class="icone">🗣️</div>
-                <h3>Língua Indígena</h3>
-                <p>Aprendizado do idioma tradicional, palavras e expressões do cotidiano.</p>
-            </div>
             <div class="card-atividade">
                 <div class="icone">🎵</div>
-                <h3>Música e Cantos</h3>
-                <p>Músicas tradicionais, instrumentos e rituais sonoros.</p>
+                <h3>Música</h3>
+                <p>Cantos e instrumentos tradicionais Guarani.</p>
+            </div>
+            <div class="card-atividade">
+                <div class="icone">💃</div>
+                <h3>Dança</h3>
+                <p>Danças rituais e celebrações culturais.</p>
             </div>
             <div class="card-atividade">
                 <div class="icone">🖌️</div>
                 <h3>Artesanato</h3>
-                <p>Produção de colares, cestarias, pinturas e objetos rituais.</p>
+                <p>Produção de colares, cestarias e objetos sagrados.</p>
             </div>
             <div class="card-atividade">
-                <div class="icone">💃</div>
-                <h3>Danças e Costumes</h3>
-                <p>Danças tradicionais, vestimentas e celebrações culturais.</p>
+                <div class="icone">🏕️</div>
+                <h3>Costumes e Tradições</h3>
+                <p>Ensino dos modos de vida e valores ancestrais.</p>
             </div>
         </div>
     </section>
 
-    <!-- GALERIA (IMAGENS DE EXEMPLO) -->
+    <!-- GALERIA (aguardando fotos) -->
     <section class="galeria">
         <h2>📸 Galeria</h2>
         <div class="grid-galeria">
-            <!-- ALTERAR AQUI: Substituir as imagens quando ele enviar as fotos -->
-            <img src="https://placehold.co/400x300/6b3e1c/white?text=Artesanato" alt="Artesanato indígena">
-            <img src="https://placehold.co/400x300/3a5a2a/white?text=M%C3%BAsica" alt="Música tradicional">
-            <img src="https://placehold.co/400x300/b85c1a/white?text=Dan%C3%A7a" alt="Dança indígena">
-            <img src="https://placehold.co/400x300/8b5a2b/white?text=Encontro" alt="Encontro cultural">
+            <img src="https://placehold.co/400x300/6b3e1c/white?text=Aguardando+Foto" alt="Aguardando foto">
+            <img src="https://placehold.co/400x300/3a5a2a/white?text=Aguardando+Foto" alt="Aguardando foto">
+            <img src="https://placehold.co/400x300/b85c1a/white?text=Aguardando+Foto" alt="Aguardando foto">
+            <img src="https://placehold.co/400x300/8b5a2b/white?text=Aguardando+Foto" alt="Aguardando foto">
         </div>
+        <p style="text-align: center; margin-top: 1rem; color: #666;">📷 Fotos serão adicionadas em breve</p>
     </section>
 
-    <!-- CONTATO -->
+    <!-- CONTATO E ENDEREÇO -->
     <section class="contato">
         <h2>📞 Entre em Contato</h2>
-        <p>Quer saber mais sobre os cursos, agendar uma visita ou convidar para uma apresentação?</p>
-        <!-- ALTERAR AQUI: Links reais quando ele enviar -->
+        <p>Para agendar atendimentos, participar das atividades ou saber mais sobre o trabalho da casa xamânica.</p>
         <div>
-            <a href="#" class="btn-whatsapp">💬 WhatsApp</a>
-            <a href="#" class="btn-instagram">📷 Instagram</a>
+            <a href="https://wa.me/5545999937153" target="_blank" class="btn-whatsapp">💬 WhatsApp (45) 99993-7153</a>
+            <a href="https://instagram.com/anama_nhandecy" target="_blank" class="btn-instagram">📷 Instagram @anama_nhandecy</a>
+        </div>
+        <div style="margin-top: 1rem;">
+            <p>🔗 Outro contato: <strong>@vincentius_dracono_33</strong></p>
+        </div>
+        <div class="endereco">
+            <p>📍 <strong>Endereço:</strong> Rua Carlos Matias Becker, 120</p>
+            <p style="font-size: 0.9rem;">(A casa está localizada neste endereço para atendimentos e atividades presenciais)</p>
         </div>
     </section>
 
 </div>
 
 <footer>
-    <p>📌 Valorize e preserve a cultura indígena brasileira.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.8rem;">Projeto de extensão - Tecnologia em Análise e Desenvolvimento de Sistemas</p>
+    <p>🏹 Anamã Nhandecy Gaya | Casa de cura e fortalecimento espiritual</p>
+    <p>🙏 Preservando e compartilhando a cultura Guarani Mbya</p>
+    <div class="cnpj">
+        CNPJ: 60.989.740/0001-24 | Responsável: Victor Hugo Vincenzi
+    </div>
 </footer>
 
 </body>
