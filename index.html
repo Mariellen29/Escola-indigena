@@ -23,7 +23,6 @@
             --folha: #3a5a2a;
             --barro: #b85c1a;
             --areia: #ede0c8;
-            --destaque: #d48c3a;
         }
 
         header {
@@ -49,7 +48,6 @@
             padding: 2rem;
         }
 
-        /* Seção Sobre */
         .sobre {
             background: white;
             border-radius: 20px;
@@ -63,7 +61,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Atividades */
         .atividades {
             margin: 2rem 0;
         }
@@ -103,7 +100,7 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Galeria */
+        /* GALERIA DE FOTOS - Layout em grid responsivo */
         .galeria {
             margin: 2rem 0;
         }
@@ -116,20 +113,62 @@
 
         .grid-galeria {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
 
         .grid-galeria img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
             border-radius: 15px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            background-color: #ddd;
+            transition: transform 0.3s;
         }
 
-        /* Contato */
+        .grid-galeria img:hover {
+            transform: scale(1.02);
+        }
+
+        /* VÍDEOS - Lado a lado */
+        .videos {
+            margin: 2rem 0;
+        }
+
+        .videos h2 {
+            color: var(--terra);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .grid-videos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .video-container {
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            aspect-ratio: 16 / 9;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Quando tiver apenas 1 vídeo, centralizar */
+        .grid-videos:has(> :only-child) {
+            grid-template-columns: 1fr;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* CONTATO */
         .contato {
             background: var(--areia);
             padding: 2rem;
@@ -141,10 +180,6 @@
         .contato h2 {
             color: var(--terra);
             margin-bottom: 1rem;
-        }
-
-        .contato p {
-            margin-bottom: 0.5rem;
         }
 
         .btn-whatsapp {
@@ -189,12 +224,22 @@
             opacity: 0.8;
         }
 
+        /* RESPONSIVO: em telas pequenas, vídeos ficam empilhados */
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
             }
             header h1 {
                 font-size: 1.8rem;
+            }
+            .grid-videos {
+                grid-template-columns: 1fr;
+            }
+            .grid-galeria {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            .grid-galeria img {
+                height: 200px;
             }
         }
     </style>
@@ -245,16 +290,40 @@
         </div>
     </section>
 
-    <!-- GALERIA (aguardando fotos) -->
+   <!-- GALERIA DE FOTOS -->
     <section class="galeria">
-        <h2>📸 Galeria</h2>
+        <h2>📸 Galeria de Fotos</h2>
         <div class="grid-galeria">
-            <img src="https://placehold.co/400x300/6b3e1c/white?text=Aguardando+Foto" alt="Aguardando foto">
-            <img src="https://placehold.co/400x300/3a5a2a/white?text=Aguardando+Foto" alt="Aguardando foto">
-            <img src="https://placehold.co/400x300/b85c1a/white?text=Aguardando+Foto" alt="Aguardando foto">
-            <img src="https://placehold.co/400x300/8b5a2b/white?text=Aguardando+Foto" alt="Aguardando foto">
+            
+            <img src="imagens/foto1.jpeg" alt="Anamã Nhandecy Gaya" onerror="this.src='https://placehold.co/400x300/6b3e1c/white?text=Foto+1'">
+            <img src="imagens/foto2.jpeg" alt="Anamã Nhandecy Gaya" onerror="this.src='https://placehold.co/400x300/3a5a2a/white?text=Foto+2'">
+            <img src="imagens/foto3.jpeg" alt="Anamã Nhandecy Gaya" onerror="this.src='https://placehold.co/400x300/b85c1a/white?text=Foto+3'">
+            <img src="imagens/foto4.jpeg" alt="Anamã Nhandecy Gaya" onerror="this.src='https://placehold.co/400x300/8b5a2b/white?text=Foto+4'">
+            <img src="imagens/foto5.jpeg" alt="Anamã Nhandecy Gaya" onerror="this.src='https://placehold.co/400x300/8b5a2b/white?text=Foto+5'">
+            <img src="imagens/foto6.jpeg" alt="Anamã Nhandecy Gaya" onerror="this.src='https://placehold.co/400x300/8b5a2b/white?text=Foto+6'">
         </div>
-        <p style="text-align: center; margin-top: 1rem; color: #666;">📷 Fotos serão adicionadas em breve</p>
+        <p style="text-align: center; margin-top: 1rem; color: #666;">📷 Registros da casa e das atividades</p>
+    </section>
+
+    <!-- VÍDEOS -->
+    <section class="videos">
+        <h2>🎬 Vídeos</h2>
+        <div class="grid-videos">
+            <!-- SUBSTITUA OS CAMINHOS PELOS NOMES REAIS DOS SEUS VÍDEOS -->
+            <div class="video-container">
+                <video controls>
+                    <source src="imagens/video1.mp4" type="video/mp4">
+                    
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="imagens/video2.mp4" type="video/mp4">
+                    
+                </video>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; color: #666;">🎥 Momentos e rituais da casa xamânica</p>
     </section>
 
     <!-- CONTATO E ENDEREÇO -->
